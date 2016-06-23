@@ -1,3 +1,6 @@
+#import-module "C:\Program Files\WindowsPowerShell\Modules\Azure\XXXX\azure.psd1"
+#import-module "C:\Program Files\WindowsPowerShell\Modules\Azure\XXXX\expressroute\expressroute.psd1"
+
 # **********************************************************************************************
 # This sample PowerShell gets the settings you'll need for the app.config file
 # **********************************************************************************************
@@ -5,15 +8,15 @@
 # **********************************************************************************************
 # You MUST set the following values before running this script
 # **********************************************************************************************
-$vaultName           = 'MyVaultName'
-$resourceGroupName   = 'MyResourceGroupName'
-$applicationName     = 'MyAppName'
+$vaultName           = 'JJVault'
+$resourceGroupName   = 'azure-test-group'
+$applicationName     = 'HelloKeyVault'
 
 # **********************************************************************************************
 # You MAY set the following values before running this script
 # **********************************************************************************************
-$applicationPassword = '' # If not specified, script will generate a random password during app creation
-$location            = 'East US'                          # Get-AzureLocation
+$applicationPassword = 'OneTech4Life' # If not specified, script will generate a random password during app creation
+$location            = 'Central US'                          # Get-AzureLocation
 
 # **********************************************************************************************
 # Generates a secure 32-byte symmetric key for authentication

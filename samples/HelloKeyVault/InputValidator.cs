@@ -24,7 +24,7 @@ using System.Security.Cryptography;
 using Microsoft.Azure.KeyVault;
 using Microsoft.Azure.KeyVault.WebKey;
 
-namespace Sample.Microsoft.HelloKeyVault
+namespace HelloKeyVault
 {
     // Contains the validators and parsers of the input argument
     class InputValidator

@@ -16,12 +16,12 @@
 // governing permissions and limitations under the License.
 
 using System;
-using System.Threading.Tasks;
+using System.Configuration;
 using System.Net.Http;
 using System.Threading;
-using System.Configuration;
+using System.Threading.Tasks;
 
-namespace Sample.Microsoft.HelloKeyVault
+namespace HelloKeyVault
 {
     public class InjectHostHeaderHttpMessageHandler : DelegatingHandler
     {

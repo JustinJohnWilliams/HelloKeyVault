@@ -15,7 +15,7 @@
 // See the Apache License, Version 2.0 for the specific language
 // governing permissions and limitations under the License.
 
-namespace Sample.Microsoft.HelloKeyVault
+namespace HelloKeyVault
 {
     enum KeyOperationType
     {
