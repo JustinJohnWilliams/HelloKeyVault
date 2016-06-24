@@ -5,17 +5,17 @@
 # **********************************************************************************************
 # You MUST set the following values before running this script
 # **********************************************************************************************
-$vaultName           = 'MyVaultName'
-$resourceGroupName   = 'MyResourceGroupName'
-$applicationName     = 'MyAppName'
-$storageName         = 'MyStorageName'
-$pathToCertFile      = 'C:\path\Certificate.cer'
+$vaultName           = 'JJVault'
+$resourceGroupName   = 'azure-test-group'
+$applicationName     = 'HelloKeyVaultWeb'
+$storageName         = 'hellokeyvaultwebstorage'
+$pathToCertFile      = 'C:\Dev\Microsoft.Azure.KeyVault.Samples\scripts\keyvault.cer'
 
 # **********************************************************************************************
 # You MAY set the following values before running this script
 # **********************************************************************************************
-$location            = 'East US'                          # Get-AzureLocation
-$secretName          = 'MyStorageAccessSecret'
+$location            = 'South Central US'                          # Get-AzureLocation
+$secretName          = 'ShhhhMyLittleSecret'
 
 # **********************************************************************************************
 # Should we bounce this script execution?
@@ -107,7 +107,7 @@ Set-AzureRmKeyVaultAccessPolicy -VaultName $vaultName `
 # **********************************************************************************************
 # Store storage account access key as a secret in the vault
 # **********************************************************************************************
-$storagekey = (Get-AzureRmStorageAccountKey -StorageAccountName $storageName -ResourceGroupName keyvault).Key1
+$storagekey = (Get-AzureRmStorageAccountKey -StorageAccountName $storageName -ResourceGroupName $resourceGroupName).Value[0]
 if(-not $storageKey)
 {
 	Write-Host 'Storage key could not be retrieved. Make sure the storage account exists.' -foregroundcolor Yellow
