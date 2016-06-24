@@ -4,23 +4,19 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <!-- The name of the pre-created storage account to store the user-message data to -->
-      <Setting name="StorageAccountName" value="" />
-
+      <Setting name="StorageAccountName" value="hellokeyvaultwebstorage" />
       <!-- The Key Vault secret URL which contains storage key -->
-      <Setting name="StorageAccountKeySecretUrl" value="" />
-
+      <Setting name="StorageAccountKeySecretUrl" value="https://jjvault.vault.azure.net:443/secrets/ShhhhMyLittleSecret" />
       <!-- The duration (ttl) that Key Vault secret value will be cached e.g. 00:20:00 -->
-      <Setting name="KeyVaultSecretCacheDefaultTimeSpan" value=""/>
-
+      <Setting name="KeyVaultSecretCacheDefaultTimeSpan" value="00:00:00" />
       <!-- The authentication client ID which has the permission to access StorageAccountKeySecretUrl[-Secondary] -->
-      <Setting name="KeyVaultAuthClientId" value="" />
-
+      <Setting name="KeyVaultAuthClientId" value="0ced072c-8d41-4bad-a645-a85641956c16" />
       <!-- The cert authentication thumbprint, used by client ID to authenticate -->
-      <Setting name="KeyVaultAuthCertThumbprint" value="" />
+      <Setting name="KeyVaultAuthCertThumbprint" value="764B135599E79313F7A69F295FEC7BC22CCA71F4" />
     </ConfigurationSettings>
     <Certificates>
       <!-- The Key Vault authentication certificate definition - thumbprint must be set to the value of KeyVaultAuthCertThumbprint -->
-      <Certificate name="KeyVaultAuthCert" thumbprint="0000000000000000000000000000000000000000" thumbprintAlgorithm="sha1" />
+      <Certificate name="KeyVaultAuthCert" thumbprint="764B135599E79313F7A69F295FEC7BC22CCA71F4" thumbprintAlgorithm="sha1" />
     </Certificates>
   </Role>
 </ServiceConfiguration>
